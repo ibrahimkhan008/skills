@@ -1,0 +1,243 @@
+==================== DOM OUTLINE ====================
+          A href=#main-content | fixed top-4 left-4 z-[70] -translate-y-24 rounded-md bg-neutral-900 px-4 py-2.5 text-sm font-semibol
+          HEADER
+                A href=/ | group flex shrink-0 items-center gap-2 rounded-md transition-transform duration-500 ease-[cubic-bezi
+                  IMG src=/logo-512.png alt='' | size-7 shrink-0 object-contain dark:invert transition-transform duration-300 eas
+                  A href=/features | text-sm font-medium text-gray-600 transition-colors duration-150 hover:text-neutral-900
+                  A href=/solutions | text-sm font-medium text-gray-600 transition-colors duration-150 hover:text-neutral-900
+                  A href=/pricing | text-sm font-medium text-gray-600 transition-colors duration-150 hover:text-neutral-900
+                  A href=/faq | text-sm font-medium text-gray-600 transition-colors duration-150 hover:text-neutral-900
+                  A href=/about | text-sm font-medium text-gray-600 transition-colors duration-150 hover:text-neutral-900
+                  A href=https://app.collabbill.com/sign-in | text-sm font-medium text-gray-600 transition-colors duration-150 hover:text-neutral-900 hidden px-3 
+                  A href=https://app.collabbill.com | block rounded-xl text-center font-medium active:scale-[0.98] bg-charcoal-900 text-white dark:bg-whit
+              A href=/ | group flex shrink-0 items-center gap-2 rounded-md
+                IMG src=/logo-512.png alt='' | size-7 shrink-0 object-contain dark:invert transition-transform duration-300 eas
+              BUTTON | shadow-collabbill flex size-9 items-center justify-center rounded-md
+              TEXT: Free invoicing for creators & freelancers
+              Heading h1 | text-center text-4xl font-medium tracking-tight text-black md:text-6xl lg:text-7xl dark:text-white mt-4 text-balance
+              TEXT: Get paid for every brand collaboration
+              Heading h2 | text-center text-sm font-medium tracking-tight text-gray-600 md:text-sm lg:text-base dark:text-gray-300 mx-auto mt-6 max
+              TEXT: Send brand-ready invoices, track deals and deliverables, and record every payment in one free workspace that keeps your business data on your device.
+                A href=https://app.collabbill.com | block rounded-xl px-6 py-2 text-center text-sm font-medium transition duration-150 active:scale-[0.9
+                A href=https://app.collabbill.com/?demo=1 | block rounded-xl px-6 py-2 text-center text-sm font-medium active:scale-[0.98] sm:text-base border-d
+                        IMG src=/logo-512.png alt='' | shrink-0 object-contain dark:invert size-5
+                          TEXT: Good afternoon, Aisha
+                          TEXT: Here’s what’s happening with your business.
+                          TEXT: Total invoiced
+                          TEXT: ₹2,48,500
+                          TEXT: Paid
+                          TEXT: ₹1,73,500
+                          TEXT: Pending
+                          TEXT: ₹52,000
+                          TEXT: Overdue
+                          TEXT: ₹23,000
+                            TEXT: Revenue overview
+                          TEXT: Recent invoices
+                                TEXT: Bloom Beauty
+                                TEXT: INV-0042
+                                TEXT: Peak Fitness
+                                TEXT: INV-0041
+                                TEXT: Urban Threads
+                                TEXT: INV-0040
+                                TEXT: Nova Audio
+                                TEXT: INV-0039
+              Heading h2 | py-8 text-center font-mono text-sm tracking-tight text-neutral-500 uppercase dark:text-gray-300
+              TEXT: Get paid the way your clients pay
+                TEXT: How it works
+                Heading h2 | text-charcoal-700 text-center text-2xl font-medium tracking-tight md:text-3xl lg:text-4xl dark:text-neutral-100 mt-4
+                TEXT: From first DM to final payment
+                TEXT: Three steps cover the whole job: agree the deal, bill it properly, and see the money come in.
+                    BUTTON | group relative flex w-full flex-col items-start overflow-hidden px-12 py-8 hover:bg-gray-100 dark:ho
+                      TEXT: Capture the brand, the deliverables, the value and the next follow-up the moment a deal lands in your inbox.
+                    BUTTON | group relative flex w-full flex-col items-start overflow-hidden px-12 py-8 hover:bg-gray-100 dark:ho
+                      TEXT: Turn the deal into an invoice with line items, GST or any tax, and payment details — then download the PDF or share a link.
+                    BUTTON | group relative flex w-full flex-col items-start overflow-hidden px-12 py-8 hover:bg-gray-100 dark:ho
+                      TEXT: Record advances, partial payments and the final balance. CollabBill always shows exactly what is still outstanding.
+                                TEXT: Brand deal
+                                TEXT: Bloom Beauty · Summer launch
+                                TEXT: Deal value
+                                TEXT: ₹45,000
+                                TEXT: Follow up
+                                TEXT: Fri, 14 Nov
+                    TEXT: Capture the brand, the deliverables, the value and the next follow-up the moment a deal lands in your inbox.
+                                TEXT: Brand deal
+                                TEXT: Bloom Beauty · Summer launch
+                                TEXT: Deal value
+                                TEXT: ₹45,000
+                                TEXT: Follow up
+                                TEXT: Fri, 14 Nov
+                    TEXT: Turn the deal into an invoice with line items, GST or any tax, and payment details — then download the PDF or share a link.
+                              TEXT: Aisha Kapoor Studio
+                              TEXT: GSTIN 27ABCDE1234F1Z5
+                              TEXT: Invoice
+                              TEXT: INV-0042
+                    TEXT: Record advances, partial payments and the final balance. CollabBill always shows exactly what is still outstanding.
+                              TEXT: INV-0042 · Bloom Beauty
+                              TEXT: ₹53,100 outstanding
+                          TEXT: Recorded manually — CollabBill never touches your money.
+                TEXT: Features
+                Heading h2 | text-charcoal-700 text-center text-2xl font-medium tracking-tight md:text-3xl lg:text-4xl dark:text-neutral-100 mt-4 px-
+                TEXT: Built for the business side of creating
+                TEXT: Invoices, deals, deliverables and payments live in one place, so you spend less time on paperwork and more time making content.
+                      Heading h3 | text-charcoal-700 text-lg font-medium dark:text-neutral-100
+                      TEXT: Invoices that look brand-ready
+                    TEXT: 15 professional templates with your logo, accent colour and font. What you preview is exactly what the PDF and the print look like.
+                      Heading h3 | text-charcoal-700 text-lg font-medium dark:text-neutral-100
+                      TEXT: A workspace for every collaboration
+                    TEXT: Keep the brief, deliverables, deadlines, usage rights and linked invoices together, and tick work off as it goes live.
+                          TEXT: Peak Fitness · New Year push
+                      Heading h3 | text-charcoal-700 text-lg font-medium dark:text-neutral-100
+                      TEXT: Click-to-pay on every invoice
+                    TEXT: Add UPI, PayPal, bank details and more. Links carry the outstanding balance where the provider supports it, and Indian invoices get an automatic UPI QR code.
+                        TEXT: Pay this invoice
+                        TEXT: ₹53,100
+                        TEXT: Scan to pay with UPI
+                        TEXT: Amount pre-filled from the balance
+                      Heading h3 | text-charcoal-700 text-lg font-medium dark:text-neutral-100
+                      TEXT: Local-first data
+                    TEXT: Your working copy lives in your browser. Export a full backup whenever you like.
+                      Heading h3 | text-charcoal-700 text-lg font-medium dark:text-neutral-100
+                      TEXT: Sync across devices
+                    TEXT: Signed in, your workspace syncs to a private cloud copy you can delete at any time.
+                      Heading h3 | text-charcoal-700 text-lg font-medium dark:text-neutral-100
+                      TEXT: Shareable invoice links
+                    TEXT: Clients open a read-only invoice without an account. Expire or revoke the link whenever you want.
+                TEXT: Who it's for
+                Heading h2 | text-charcoal-700 text-center text-2xl font-medium tracking-tight md:text-3xl lg:text-4xl dark:text-neutral-100 mt-4
+                TEXT: Made for independent work
+                TEXT: Whether you post, write, design or consult, CollabBill fits the way you already work with brands and clients.
+                      Heading h3 | mt-4 mb-2 text-lg font-medium
+                      TEXT: Influencers
+                      TEXT: Bill brand collaborations with deliverables, usage rights and exclusivity spelled out on the invoice.
+                      Heading h3 | mt-4 mb-2 text-lg font-medium
+                      TEXT: Content creators
+                      TEXT: Run sponsorships alongside media kits, rate cards and a portfolio brands can actually review.
+                      Heading h3 | mt-4 mb-2 text-lg font-medium
+                      TEXT: Freelancers
+                      TEXT: Clients, estimates, invoices and payments in one tidy place, without accounting jargon.
+                      Heading h3 | mt-4 mb-2 text-lg font-medium
+                      TEXT: Studios & agencies
+                      TEXT: Organise client work per engagement with collaboration workspaces, expenses and exports.
+                      Heading h3 | mt-4 mb-2 text-lg font-medium
+                      TEXT: Consultants
+                      TEXT: Quote with estimates, convert them to invoices in one click, and follow up on what you're owed.
+                      Heading h3 | mt-4 mb-2 text-lg font-medium
+                      TEXT: Working with Indian brands
+                      TEXT: GSTIN, PAN, HSN/SAC codes, CGST + SGST or IGST, and UPI payments built in from day one.
+                TEXT: Benefits
+                Heading h2 | text-charcoal-700 text-center text-2xl font-medium tracking-tight md:text-3xl lg:text-4xl dark:text-neutral-100 mt-4
+                TEXT: Less paperwork, more creating
+                TEXT: CollabBill handles the boring parts of running an independent business, so getting paid stops eating your week.
+                    Heading h3 | mt-4 mb-2 text-lg font-medium
+                    TEXT: Invoice in under a minute
+                    TEXT: Your profile, tax and payment details fill in automatically. Add the line items and you're done.
+                    Heading h3 | mt-4 mb-2 text-lg font-medium
+                    TEXT: Maths you can trust
+                    TEXT: Discounts, multiple taxes and balances follow one consistent order, so totals match what accountants expect.
+                    Heading h3 | mt-4 mb-2 text-lg font-medium
+                    TEXT: Never lose track of money
+                    TEXT: Partial payments, refunds and overdue invoices are always visible, with an aging view of who owes what.
+                        IMG src=/logo-512.png alt='' | size-7 shrink-0 object-contain dark:invert
+                          TEXT: This month
+                    Heading h3 | mt-4 mb-2 text-lg font-medium
+                    TEXT: Look professional
+                    TEXT: Polished PDFs, receipts, credit notes and statements that hold up in any brand's finance team.
+                    Heading h3 | mt-4 mb-2 text-lg font-medium
+                    TEXT: Know your numbers
+                    TEXT: Revenue, expenses, estimated profit and a tax summary by rate, calculated from your own records.
+                    Heading h3 | mt-4 mb-2 text-lg font-medium
+                    TEXT: Keep your data yours
+                    TEXT: Everything works from your device first. Back it up, sync it, or delete it — your call.
+              Heading h2 | pt-20 pb-10 text-center font-mono text-sm tracking-tight text-neutral-500 uppercase dark:text-neutral-400
+              TEXT: CollabBill in numbers
+                            TEXT: Aisha Kapoor Studio
+                            TEXT: GSTIN 27ABCDE1234F1Z5
+                            TEXT: Invoice
+                            TEXT: INV-0042
+                      TEXT: Every feature is free. No trial, no paid tier.
+                      TEXT: Invoices, estimates, collaborations, reports and the creator toolkit are all included. If paid plans ever arrive, the pricing page will say so first.
+                      TEXT: ₹0
+                      TEXT: per month, for everything available today
+                  TEXT: ₹0
+                  TEXT: per month, for everything available today
+                BUTTON | border-divide group relative overflow-hidden border-r border-b md:border-b-0 md:border-r
+                TEXT: ₹0Price
+                BUTTON | border-divide group relative overflow-hidden border-b md:border-b-0 md:border-r
+                TEXT: 15Templates
+                BUTTON | border-divide group relative overflow-hidden border-r md:border-r
+                TEXT: 23Currencies
+                BUTTON | border-divide group relative overflow-hidden md:border-r-0
+                TEXT: 9Payments
+            SECTION
+                TEXT: Pricing
+                Heading h2 | text-charcoal-700 text-center text-2xl font-medium tracking-tight md:text-3xl lg:text-4xl dark:text-neutral-100 mt-4
+                TEXT: Free. Really.
+                TEXT: No subscription and no trial clock. Everything CollabBill does today is included for every account.
+                    Heading h3 | text-charcoal-700 text-xl font-medium dark:text-neutral-100
+                    TEXT: Free
+                    TEXT: For every creator and freelancer
+                    A href=https://app.collabbill.com | block rounded-xl px-6 py-2 text-center text-sm font-medium transition duration-150 active:scale-[0.9
+                      A href=/pricing | underline underline-offset-2 hover:text-neutral-900 dark:hover:text-white
+                    TEXT: Free sign-in with email or Google. Pricing details
+              Heading h2 | pt-10 pb-5 text-center font-mono text-sm tracking-tight text-neutral-500 uppercase md:pt-20 md:pb-10 dark:text-neutral-4
+              TEXT: Your data stays yours
+                Heading h2 | text-charcoal-700 text-2xl font-medium tracking-tight md:text-3xl lg:text-4xl dark:text-neutral-100 text-left
+                TEXT: Local-first by design
+                TEXT: CollabBill keeps your business data on your device first. Your clients' details are never shared with other users, and you decide when to sync, back up or delete.
+                A href=/privacy | rounded-xl px-6 py-2 text-center text-sm font-medium transition duration-150 active:scale-[0.98] sm:
+                  TEXT: On your device
+                  TEXT: Your working copy lives in your browser.
+                  TEXT: Private cloud copy
+                  TEXT: Synced only to your account, deletable anytime.
+                  TEXT: Export anytime
+                  TEXT: Download a full backup in one click.
+              TEXT: FAQs
+              Heading h2 | text-charcoal-700 text-center text-2xl font-medium tracking-tight md:text-3xl lg:text-4xl dark:text-neutral-100 mt-4
+              TEXT: Frequently Asked Questions
+              TEXT: Quick answers to what creators ask most. Still have a question? We read every message.
+                A href=/faq | block rounded-xl px-6 py-2 text-center text-sm font-medium transition duration-150 active:scale-[0.9
+                A href=/contact | block rounded-xl px-6 py-2 text-center text-sm font-medium active:scale-[0.98] sm:text-base border-d
+                  BUTTON | flex w-full items-center justify-between gap-4 px-4 py-6 text-left md:px-8
+                  TEXT: Is CollabBill free?
+                  BUTTON | flex w-full items-center justify-between gap-4 px-4 py-6 text-left md:px-8
+                  TEXT: Do I need an account?
+                  BUTTON | flex w-full items-center justify-between gap-4 px-4 py-6 text-left md:px-8
+                  TEXT: Where is my data stored?
+                  BUTTON | flex w-full items-center justify-between gap-4 px-4 py-6 text-left md:px-8
+                  TEXT: Does CollabBill sync between devices?
+                  BUTTON | flex w-full items-center justify-between gap-4 px-4 py-6 text-left md:px-8
+                  TEXT: Can I share an invoice with a client?
+                  BUTTON | flex w-full items-center justify-between gap-4 px-4 py-6 text-left md:px-8
+                  TEXT: Does CollabBill handle GST and UPI?
+                  BUTTON | flex w-full items-center justify-between gap-4 px-4 py-6 text-left md:px-8
+                  TEXT: Does CollabBill process payments?
+                Heading h2 | text-charcoal-900 mt-4 text-3xl leading-tight font-medium tracking-tight text-balance md:text-5xl
+                TEXT: Your whole creator business, in one free workspace
+                TEXT: Invoices, collaborations, payments and reports, ready the moment you open it.
+                  A href=https://app.collabbill.com | block rounded-xl px-6 py-2 text-center text-sm font-medium transition duration-150 active:scale-[0.9
+                  A href=https://app.collabbill.com/?demo=1 | block rounded-xl px-6 py-2 text-center text-sm font-medium active:scale-[0.98] sm:text-base border-d
+          FOOTER | max-w-7xl mx-auto
+                A href=/ | group flex shrink-0 items-center gap-2 rounded-md
+                  IMG src=/logo-512.png alt='' | size-7 shrink-0 object-contain dark:invert transition-transform duration-300 eas
+                TEXT: The free business workspace for creators, influencers and freelancers.
+                A href=https://app.collabbill.com | rounded-xl px-6 py-2 text-center text-sm font-medium transition duration-150 active:scale-[0.98] sm:
+              NAV | col-span-1 flex flex-col gap-2
+                TEXT: Product
+                A href=/features | text-footer-link my-1.5 text-sm font-medium transition-colors duration-150 hover:text-neutral-900 da
+                A href=/solutions | text-footer-link my-1.5 text-sm font-medium transition-colors duration-150 hover:text-neutral-900 da
+                A href=/pricing | text-footer-link my-1.5 text-sm font-medium transition-colors duration-150 hover:text-neutral-900 da
+                A href=/faq | text-footer-link my-1.5 text-sm font-medium transition-colors duration-150 hover:text-neutral-900 da
+                A href=https://app.collabbill.com/?demo=1 | text-footer-link my-1.5 text-sm font-medium transition-colors duration-150 hover:text-neutral-900 da
+              NAV | col-span-1 flex flex-col gap-2
+                TEXT: Company
+                A href=/about | text-footer-link my-1.5 text-sm font-medium transition-colors duration-150 hover:text-neutral-900 da
+                A href=/contact | text-footer-link my-1.5 text-sm font-medium transition-colors duration-150 hover:text-neutral-900 da
+                A href=https://app.collabbill.com/sign-in | text-footer-link my-1.5 text-sm font-medium transition-colors duration-150 hover:text-neutral-900 da
+              NAV | col-span-1 flex flex-col gap-2
+                TEXT: Legal
+                A href=/privacy | text-footer-link my-1.5 text-sm font-medium transition-colors duration-150 hover:text-neutral-900 da
+                A href=/terms | text-footer-link my-1.5 text-sm font-medium transition-colors duration-150 hover:text-neutral-900 da
+                A href=/privacy#grievance-redressal | text-footer-link my-1.5 text-sm font-medium transition-colors duration-150 hover:text-neutral-900 da
+              TEXT: © 2026 CollabBill. All rights reserved.
+                A href=https://www.instagram.com/collabbill | text-footer-link flex size-9 items-center justify-center rounded-md transition-colors duration-150 h
+                A href=https://x.com/collabbill | text-footer-link flex size-9 items-center justify-center rounded-md transition-colors duration-150 h
