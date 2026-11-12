@@ -1,0 +1,36 @@
+/* Accent-text halftone effect — italic serif headline words whose fill is a
+   paper→brand gradient showing through a 2.4px halftone dot mask (the
+   "dithered text" signature: e.g. "Service" in "Terms of *Service*").
+   Ready-to-paste; target-agnostic via the two color variables.
+
+   Extraction knobs (measure on the target — see clone-build.md §C3.6):
+   - gradient stop where the brand color takes over (here 30%)
+   - mask tile size (here 2.4px × 2.4px) and dot radii (0.95px solid / 1.3px fade)
+   - the accent font: italic 400 serif; ship a metric-adjusted fallback face
+     (Cognix uses a Times fallback: ascent-override 117.94%, descent-override
+     36.93%, size-adjust 83.94%) so line breaks don't shift while the webfont loads */
+
+.accent-text {
+  font-family: var(--font-accent), "Instrument Serif", Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  background-image: linear-gradient(
+    to right,
+    var(--accent-text-from, currentColor) 30%,
+    var(--accent-text-to, #0b7a3f)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding-right: 0.06em; /* keeps the italic overhang from being clipped */
+  -webkit-mask-image: radial-gradient(circle, #000 0.95px, #0000 1.3px);
+  mask-image: radial-gradient(circle, #000 0.95px, #0000 1.3px);
+  -webkit-mask-size: 2.4px 2.4px;
+  mask-size: 2.4px 2.4px;
+}
+
+/* Usage: always the TRAILING words of a headline —
+   <h1>Terms of <span class="accent-text">Service</span></h1>
+   The mask makes the gradient read as halftone dots; without it the same
+   gradient renders as a flat color blend. Reduced-motion: nothing to disable
+   (the effect is static). */

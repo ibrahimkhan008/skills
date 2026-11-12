@@ -32,6 +32,7 @@ pixel-clone/               PixelClone — the skill (install this)
     ├── stitch-pngs.mjs        stitch viewport screenshots into a full-page PNG
     ├── dither-kit.mjs         procedural Bayer-8×8 dither art generator (never copy the target's PNGs)
     ├── dither-canvas.tsx      animated drifting-dither React component (raster + opacity-0 canvas)
+    ├── accent-text.css        halftone/dithered headline-text effect (italic serif + gradient + dot mask)
     └── recon-workflow.template.ts   fan-out recon over large sites
 
 websites/                  sites built with the skill (local test outputs)

@@ -111,6 +111,28 @@ PNGs**. Reproduce the effect procedurally:
 5. **Reduced motion:** the canvas stays a static dither; the raster is always the
    no-JS fallback (the raster renders alone; the canvas only enhances).
 
+### C3.6 Accent-text halftone effect (dithered headline words)
+
+The same halftone aesthetic applied to **text**: trailing headline words render in
+italic serif with a paper→brand gradient showing through a halftone dot mask — the
+letters themselves look dithered ("Terms of *Service*", where "Service" is textured
+and shifts to brand green toward its end). Ship it with `assets/accent-text.css`.
+
+1. **Find it in the compiled CSS:** grep for `background-clip:text` (often
+   `-webkit-background-clip`) near `mask-image` on heading spans — the accent class
+   carries both the gradient and the mask.
+2. **Extract the knobs:** the gradient's brand-takeover stop (Cognix: 30%), the mask
+   tile size (2.4px × 2.4px) and dot radii (solid 0.95px, fade to 1.3px), the accent
+   font (italic 400 serif) and its fallback face with metric overrides, and the
+   anti-clip padding (Cognix: `padding-right: 0.06em` — italic overhang gets cut
+   without it).
+3. **Apply verbatim** via the asset (set `--accent-text-from/to` to the target's
+   text/brand tokens). Always the **trailing words** of a headline; the mask is what
+   turns a flat gradient into the halftone texture — if the target's letters look
+   solid, it's the same gradient without the mask (record which variant the target
+   uses per heading).
+4. **Reduced-motion:** static — nothing to gate. No-JS: pure CSS, always renders.
+
 ## C4. Replace framework behaviors with vanilla JS
 
 Inventory the interactivity from the static markup first — it tells you what the
