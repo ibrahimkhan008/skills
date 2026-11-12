@@ -41,13 +41,6 @@ skills/
 └── assets/                    README images
 ```
 
-> Folder names: skill names must be lowercase kebab-case and match the SKILL.md
-> frontmatter (`name: pixel-clone`), so the folder is `pixel-clone/` — "PixelClone" is the
-> display title. `skills/` is kept as the container directory: it is what the skills CLI
-> scans first, and a skill placed directly at the repo root is only found by the CLI's
-> last-resort recursive fallback (`skills.sh.json` paths can't express the root — entries
-> must point at container directories).
-
 ## Install just this skill
 
 ```bash
