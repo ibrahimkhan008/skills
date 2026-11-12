@@ -103,6 +103,10 @@ React bundle was doing:
   not inside it; the desktop stage holds one layer while the mobile variant holds
   all three (clone mobile panels into the stage on tab switch).
 
+The values these replacements use — exact easings, stagger steps, scroll thresholds,
+hover/active deltas — come from the extraction playbook in
+`references/micro-interactions.md`; don't invent them at build time.
+
 ## C5. Mine client-rendered content
 
 On-demand content (accordion answers, tab panels, hidden states) is frequently

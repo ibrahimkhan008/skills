@@ -8,7 +8,8 @@ npx skills add ibrahimkhan008/skills
 ```
 
 Reverse-engineer any website into a fact-checked rebuild spec — and, when asked, a working
-1:1 pixel replica. Fetch-only recon, JS-chunk mining, design-token extraction, a
+1:1 pixel replica. Fetch-only recon, JS-chunk mining, design-token extraction,
+micro-interaction capture (keyframes, easings, hover states, reveal families), a
 logged-in app walkthrough (optional), and a markup-transplant clone pipeline with an
 original-vs-clone screenshot verification.
 
@@ -21,6 +22,7 @@ skills/
 │   ├── references/            playbooks the agent loads only when needed
 │   │   ├── public-recon.md        fetch order, crawl discipline, JS-chunk mining
 │   │   ├── css-extraction.md      design-token extraction logic + paste-ready output
+│   │   ├── micro-interactions.md  motion/hover/reveal extraction + 1:1 motion rules
 │   │   ├── clone-build.md         the 1:1 replica pipeline (transplant, tokens, verify)
 │   │   ├── app-walkthrough.md     logged-in app capture (login is the user's hands)
 │   │   ├── cognix-case-study.md   complete worked example

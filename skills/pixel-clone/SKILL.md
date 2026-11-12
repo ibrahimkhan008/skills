@@ -12,7 +12,7 @@ description: >
 license: MIT
 metadata:
   author: MD Ibrahim Arman
-  version: "1.2.0"
+  version: "1.3.0"
 ---
 
 # PixelClone — site rebuild & 1:1 replica specs
@@ -32,14 +32,16 @@ REPLACE markers. Final legal text is always drafted fresh.
 ## Phase split — decide before starting
 
 1. **Public recon (always).** Fetch-only: no browser needed. Robots/sitemap/llms.txt → page
-   crawls → design tokens → chunk mining → legal outlines → spec.
+   crawls → design tokens + **micro-interactions** (keyframes, easings, hover states,
+   reveal families, spring configs) → chunk mining → legal outlines → spec.
 2. **App walkthrough (only if the site has a logged-in product and the user wants it).**
    Browser session in the main agent; user completes any login/OAuth/CAPTCHA themselves.
 3. **Clone & apply (optional).** When the user wants a working clone, not just specs, build
-   the flagship page(s) applying the extracted values **one-to-one** — tokens into a
-   `:root`/`@theme` sheet unchanged, §4-style components, blueprint sections as markup —
-   under the asset policy (recreate structure exactly; procedurally generate or placeholder
-   anything brand-owned). Then verify with a side-by-side screenshot comparison.
+   the flagship page(s) as a **1:1 replica** — tokens into a `:root`/`@theme` sheet
+   unchanged, §4-style components, blueprint sections as markup, micro-interactions at the
+   captured easings/staggers — under the asset policy (recreate structure exactly;
+   procedurally generate or placeholder anything brand-owned). Then verify with a
+   side-by-side screenshot comparison.
    **Pick the build strategy first** (`references/clone-build.md` §C0): on a prerendered
    page, transplant the target's own DOM (harvest per section, reattach tokens, replace the
    framework's JS with vanilla equivalents) — it reaches true 1:1 far faster and more
@@ -47,6 +49,15 @@ REPLACE markers. Final legal text is always drafted fresh.
    shells. For a faithful replica kept strictly local, brand copy may stay verbatim when
    the user explicitly asked for a replica — say "local test only, not for deployment" in
    the README; anything that leaves the machine falls under the hard rule above.
+
+   **A 1:1 replica reproduces:** exact hex/spacing/radii/shadow strings; exact typography
+   per breakpoint; exact DOM/section order with captured aria names and testids; exact
+   keyframes, easings, stagger patterns, scroll thresholds, and hover/active/focus states
+   (`references/micro-interactions.md`); the same SSR-vs-client-render split; breakpoint
+   behavior including mobile-only omissions (they are design decisions); ambient loops at
+   the captured cadence; the same reduced-motion posture. It replaces only brand assets
+   (procedural stand-ins) and — outside the local-replica exception above — verbatim copy
+   and legal text (REPLACE pass).
 
 Read the phase playbooks before executing:
 
@@ -58,6 +69,11 @@ Read the phase playbooks before executing:
   literals that bypass tokens), typography/weight/opacity ladders, shadow + radii stacks,
   motion variable families, per-instance component surface systems, provenance marking, and
   the paste-ready output format.
+- `references/micro-interactions.md` — the micro-interaction & motion playbook: grepping
+  compiled CSS for keyframes/easings/pseudo-element glow systems/reveal initial-state
+  families, mining JS chunks for spring configs and interaction logic, the live-observation
+  checklist (hover/scroll/streaming/ambient), the per-component interaction-state matrix,
+  and the motion rules a 1:1 clone owes.
 - `references/clone-build.md` — the 1:1 replica build playbook: strategy test
   (prerendered → markup transplant vs client-rendered → hand-build), DOM harvesting with
   `assets/split_landing.py`, Tailwind rebuild pitfalls (version detection, custom utilities,
@@ -79,7 +95,8 @@ confirmed.** The explanation must cover, concretely:
 
 1. **Token sheet summary** — the extracted `:root`/`@theme` values that will go into the
    stylesheet (colors with hex, type ladder, spacing/radii/shadows, motion), including any
-   swapped naming and "fix in rebuild" items.
+   swapped naming and "fix in rebuild" items — plus the **micro-interaction summary**
+   (keyframes, easings, staggers, hover/active states) that the clone must reproduce.
 2. **Component inventory** — each component to build and which extracted spec defines it.
 3. **Build order** — section-by-section for the page(s) being cloned, matching the
    blueprint's DOM order.
@@ -151,8 +168,9 @@ and branding, never on "improving" measurements mid-clone.
 ## Deliverable contract
 
 1. `<domain>-rebuild-spec.md` — public site: overview/stack, route map + IA, token sheet
-   (paste-ready), component library, per-page blueprints with verbatim copy, feature
-   inventory, legal outlines, issues/gaps, reuse-vs-replace, build milestones.
+   (paste-ready), motion & micro-interaction sheet, component library with
+   interaction-state matrices, per-page blueprints with verbatim copy, feature inventory,
+   legal outlines, issues/gaps, reuse-vs-replace, build milestones.
 2. `<domain>-app-spec.md` — logged-in app: account/session facts, route map (verified vs
    gated vs blocked), shell & navigation, feature behaviors, settings taxonomy, theming,
    API/infra surface, quota/checkout, mobile layout, build-plan delta.
@@ -172,8 +190,8 @@ and branding, never on "improving" measurements mid-clone.
 1. Confirm scope with the user in one message: target URL, public-only vs app too vs full
    clone, login method (if app), and whether checkout may be *opened* (never paid). Then work
    without asking again — except at the explain-before-code gate.
-2. Run Phase A (read `references/public-recon.md` + `references/css-extraction.md` first).
-   Deliver the public spec.
+2. Run Phase A (read `references/public-recon.md` + `references/css-extraction.md` +
+   `references/micro-interactions.md` first). Deliver the public spec.
 3. If app research is in scope: run Phase B (read `references/app-walkthrough.md` first),
    then write the app spec and add the cross-reference pointers.
 4. If a clone is in scope: pick the strategy (`references/clone-build.md` §C0), **present
