@@ -12,7 +12,7 @@ description: >
 license: MIT
 metadata:
   author: MD Ibrahim Arman
-  version: "1.3.0"
+  version: "1.4.0"
 ---
 
 # PixelClone — site rebuild & 1:1 replica specs
@@ -32,8 +32,10 @@ REPLACE markers. Final legal text is always drafted fresh.
 ## Phase split — decide before starting
 
 1. **Public recon (always).** Fetch-only: no browser needed. Robots/sitemap/llms.txt → page
-   crawls → design tokens + **micro-interactions** (keyframes, easings, hover states,
-   reveal families, spring configs) → chunk mining → legal outlines → spec.
+   crawls → the **effect census** (every color, typography treatment, spacing value,
+   shadow, gradient, mask, filter, transition, keyframe, pseudo-element system, and
+   interactive state — automatically, from HTML + compiled CSS + chunks) → design tokens +
+   micro-interactions → legal outlines → spec.
 2. **App walkthrough (only if the site has a logged-in product and the user wants it).**
    Browser session in the main agent; user completes any login/OAuth/CAPTCHA themselves.
 3. **Clone & apply (optional).** When the user wants a working clone, not just specs, build
@@ -59,6 +61,16 @@ REPLACE markers. Final legal text is always drafted fresh.
    (procedural stand-ins) and — outside the local-replica exception above — verbatim copy
    and legal text (REPLACE pass).
 
+**Autonomy rule — the user never names effects.** The effect census
+(`references/effect-census.md`) is a mandatory Phase A step, not an optional one: sweep
+every fetched page against the compiled CSS and inventory every visual on the site —
+colors, typography treatments, spacing rhythm, shadows, gradients, masks, filters,
+motion, states, pseudo-element systems, layering. The user never needs to send screenshots
+or say "this site has X effect, copy it": when they point at anything later, it is already
+in the effects inventory with its exact values. If the live site shows something the
+census cannot explain, chase it to its chunk (or Phase B) before writing the spec — an
+undocumented visual is a gap, and a gap becomes a tell in the replica.
+
 Read the phase playbooks before executing:
 
 - `references/public-recon.md` — fetch order, crawl discipline, token extraction, JS-chunk
@@ -74,6 +86,11 @@ Read the phase playbooks before executing:
   families, mining JS chunks for spring configs and interaction logic, the live-observation
   checklist (hover/scroll/streaming/ambient), the per-component interaction-state matrix,
   and the motion rules a 1:1 clone owes.
+- `references/effect-census.md` — the exhaustive sweep that makes the skill autonomous:
+  build the "used CSS" set, bucket every declaration (colors, typography, spacing,
+  surfaces, effects, structure), census pseudo-states/pseudo-elements/at-rules, classify
+  into the effects-inventory table, run the completeness gate, and finish clones with the
+  replica-blind audit.
 - `references/clone-build.md` — the 1:1 replica build playbook: strategy test
   (prerendered → markup transplant vs client-rendered → hand-build), DOM harvesting with
   `assets/split_landing.py`, Tailwind rebuild pitfalls (version detection, custom utilities,
@@ -168,9 +185,10 @@ and branding, never on "improving" measurements mid-clone.
 ## Deliverable contract
 
 1. `<domain>-rebuild-spec.md` — public site: overview/stack, route map + IA, token sheet
-   (paste-ready), motion & micro-interaction sheet, component library with
-   interaction-state matrices, per-page blueprints with verbatim copy, feature inventory,
-   legal outlines, issues/gaps, reuse-vs-replace, build milestones.
+   (paste-ready), **effects inventory** (the index of every visual on the site), motion &
+   micro-interaction sheet, component library with interaction-state matrices, per-page
+   blueprints with verbatim copy, feature inventory, legal outlines, issues/gaps,
+   reuse-vs-replace, build milestones.
 2. `<domain>-app-spec.md` — logged-in app: account/session facts, route map (verified vs
    gated vs blocked), shell & navigation, feature behaviors, settings taxonomy, theming,
    API/infra surface, quota/checkout, mobile layout, build-plan delta.
@@ -191,7 +209,8 @@ and branding, never on "improving" measurements mid-clone.
    clone, login method (if app), and whether checkout may be *opened* (never paid). Then work
    without asking again — except at the explain-before-code gate.
 2. Run Phase A (read `references/public-recon.md` + `references/css-extraction.md` +
-   `references/micro-interactions.md` first). Deliver the public spec.
+   `references/effect-census.md` + `references/micro-interactions.md` first — the census
+   drives the sweep). Deliver the public spec.
 3. If app research is in scope: run Phase B (read `references/app-walkthrough.md` first),
    then write the app spec and add the cross-reference pointers.
 4. If a clone is in scope: pick the strategy (`references/clone-build.md` §C0), **present

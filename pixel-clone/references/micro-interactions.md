@@ -3,7 +3,9 @@
 Micro-interactions are what make a clone feel like the original instead of a screenshot of
 it. The Cognix specs captured them from three sources; on a new target, work all three.
 Everything below is the exact method used to produce the §3.7 motion sheet and the §4
-component interaction specs — apply it to any site.
+component interaction specs — apply it to any site. Motion is one bucket of the full
+**effect census** (`references/effect-census.md`) — run the census first so every visual
+is found, then use this playbook for the motion bucket's depth.
 
 ## Where micro-interactions hide (three sources, all required)
 

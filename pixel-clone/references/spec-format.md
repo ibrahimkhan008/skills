@@ -24,11 +24,15 @@ Purpose + capture method + branding rule (read first)
 2. Route map & information architecture — routes, aliases, non-page endpoints,
                                          robots contract, sitemap, nav/footer IA,
                                          global overlays (toaster, consent, theme bootstrap)
-3. Design system spec                 — CSS variables / @theme token sheet, usage map,
-                                         typography, spacing/breakpoints, radii/shadows,
-                                         motion, theming
+3. Design system spec                 — opens with the effects-inventory table (every
+                                         visual: effect, where it fires, type, trigger,
+                                         exact values, source), then the CSS variables /
+                                         @theme token sheet, usage map, typography,
+                                         spacing/breakpoints, radii/shadows, motion,
+                                         theming
 4. Shared component library           — one spec per component (nav, buttons+variants,
                                          cards, forms, footer, accordion, pricing card…)
+                                         each with its interaction-state matrix
 5. Page blueprints (route order)      — section-by-section: verbatim copy, layout,
                                          imagery, interactions; uncaptured pages listed
 6. Feature inventory (by product area)
