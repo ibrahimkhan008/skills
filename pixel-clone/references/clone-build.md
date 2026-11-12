@@ -75,6 +75,42 @@ site can mix both — transplant the marketing pages, hand-build the app.
 - Keep original nav hrefs (`/features`, …) in a single-page clone — they 404 locally,
   which is fine and expected; say so in the README.
 
+### C3.5 Dither art (the drifting-mist signature) — reproduce, don't copy
+
+Dithered monochrome art is a brand asset like any other: **never copy the target's
+PNGs**. Reproduce the effect procedurally:
+
+1. **Extract the parameters first.** Preferred source: the target's own design doc
+   (Cognix's `design.md` cites Bayer 8×8, 2px dots, ink `#3C3C3C` at 37% coverage,
+   gamma 1.4). Otherwise estimate from the raster: dot size (zoom in — 2px here),
+   ink color (color-pick a dark dot), and density (fraction of inked cells).
+2. **Generate stand-ins at the exact consumed dimensions** with
+   `assets/dither-kit.mjs` (pure Node, no deps):
+
+   ```bash
+   node dither-kit.mjs out/hero.png 1200 630 ridge 1.7   # alpine hero backdrop
+   node dither-kit.mjs out/footer.png 1600 320 band      # watermark band
+   node dither-kit.mjs out/cta.png 1200 630 card         # CTA card backdrop
+   node dither-kit.mjs out/map.png 1600 820 field       # sparse map texture
+   node dither-kit.mjs out/plan-1.png 480 160 banner 1  # small card banners
+   ```
+
+   Tune the style/seed until the silhouette shape matches the target's composition
+   (ridge position, fade direction) — the *effect* is copied, the *artwork* is yours.
+3. **Wire the animated variant.** The original pairs each raster with an
+   `opacity-0` `<canvas>` the client repaints as a drifting Bayer dither, fading in
+   over ~700ms. Use `assets/dither-canvas.tsx` (React client component) — it
+   implements exactly that mechanic (drifting threshold, ~90ms frames, static
+   under `prefers-reduced-motion`). Static clones can skip the canvas and ship the
+   raster alone.
+4. **Apply the target's CSS treatment verbatim:** `[image-rendering:pixelated]`,
+   `object-cover` (+ `object-top`/`object-[50%_70%]` where captured), and the masks
+   — hero `radial-gradient(ellipse 44% 34% at 27% 70%, black 30%, transparent 100%)`,
+   footer watermark `radial-gradient(ellipse 75% 80% at 50% 92%, rgba(0,0,0,0.1) 45%,
+   #000 100%)` — plus any white gradient overlays on card backdrops.
+5. **Reduced motion:** the canvas stays a static dither; the raster is always the
+   no-JS fallback (the raster renders alone; the canvas only enhances).
+
 ## C4. Replace framework behaviors with vanilla JS
 
 Inventory the interactivity from the static markup first — it tells you what the
